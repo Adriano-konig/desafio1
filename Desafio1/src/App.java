@@ -2,16 +2,10 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Scanner leitor = new Scanner(System.in);
 
         System.out.println("***************************************************");
         System.out.println("********************  SIMCITY  ********************");
         System.out.println("***************************************************");
-        //System.out.println("Primeiro faz o seu cadastro");
-        // System.out.println("Informe seu nome: ");
-        // String nome1 = leitor.nextLine();
-        // System.out.println("Qual é seu profissão atual?");
-        // String profissao = leitor.nextLine();
         taxaDeImposto();
     }
     public static void taxaDeImposto(){
@@ -25,9 +19,6 @@ public class App {
         System.out.println("\nOlá, quantos mes vc gostaria fazer calcular?1 a 12 meses");
         int mes = leitor.nextInt();
         double vetor[] = new double[mes];
-
-        //String[] ListaNome = new String[1];
-       // String[] ListaProfissao = new String[1];
 
         for(int i = 0; i < vetor.length; i++ ){
            System.out.println("Informe salario mes "+(i+1)+": "); 
