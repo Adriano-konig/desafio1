@@ -25,7 +25,7 @@ public class App {
            vetor[i] = leitor.nextDouble();
         }
         for(int i = 0; i < 1000; i++ ){
-        System.out.println("Olá,escolhe o menu oque você gostaria continuar:\n\n"+
+        System.out.println("\nOlá,escolhe o menu oque você gostaria continuar:\n\n"+
                              "1 = cadastro\n"+
                              "2 = mostrar sua informação\n"+
                              "3 = salario\n"+
@@ -33,41 +33,59 @@ public class App {
                              "5 = digita exit para sair o sistema\n");
         menu = leitor.nextInt();
         if(menu == 1){
+            System.out.println(" ---------------------------------");
             System.out.println("Nome: ");
             nome = leitor.next();
+            System.out.println(" ---------------------------------");
             System.out.println("Profissão: ");
             profissao = leitor.next();
+            System.out.println(" ---------------------------------");
         }
         if(menu == 2){
-            System.out.println("\nNome "+nome);
-            System.out.println("Profissao "+profissao);
+            System.out.println(" ---------------------------------");
+            System.out.println("     Nome: "+nome+"                   ");
+            System.out.println(" ---------------------------------");
+            System.out.println("     Profissao: "+profissao+"         ");
+            System.out.println(" ---------------------------------");
         }
        if(menu == 3){
             for(int j = 0; j < vetor.length; j++ ){
-             System.out.println("Salario "+vetor[j]);
+                System.out.println(" ---------------------------------------------");
+                System.out.println("              Salario: "+vetor[j]);
+                System.out.println(" ----------------------------------------------");
         }
     }
         if(menu == 4){
         for(i = 0;i < vetor.length; i++ ){
             if(vetor[i] >= 0.00 && vetor[i] <=2000.00){
-                System.out.println(" mes "+(i+1)+" Não tem imposto");
+                System.out.println(" --------------------------------------------------------------------------");
+                System.out.println("     mes "+(i+1)+" Não tem imposto     ");
+                System.out.println(" --------------------------------------------------------------------------");
             }else if(vetor[i] >= 2001.00 && vetor[i] <= 3000.00){
                 imposto = vetor[i] * 0.08;
                 resultado = vetor[i] - imposto;
-                System.out.println(" mes "+(i+1)+" com 8% desconto de imposto seu salario é "+resultado);
+                System.out.println(" --------------------------------------------------------------------------");
+                System.out.println("     mes "+(i+1)+" com 8% desconto de imposto seu salario é "+resultado);
+                System.out.println(" --------------------------------------------------------------------------");
             }else if(vetor[i] >= 3001.00 && vetor[i] <= 4500.00){
                 imposto = vetor[i] * 0.18;
                 resultado = vetor[i] - imposto;
-                System.out.println(" mes "+(i+1)+" com 18% desconto de imposto seu salario é "+resultado);
+                System.out.println(" --------------------------------------------------------------------------");
+                System.out.println("     mes "+(i+1)+" com 18% desconto de imposto seu salario é "+resultado);
+                System.out.println(" --------------------------------------------------------------------------");
             }else{
                 imposto = vetor[i] * 0.28;
                 resultado = vetor[i] - imposto;
-                System.out.println(" mes "+(i+1)+" com 28% desconto de imposto seu salario mês é "+resultado);
+                System.out.println(" --------------------------------------------------------------------------");
+                System.out.println("     mes "+(i+1)+" com 28% desconto de imposto seu salario mês é "+resultado);
+                System.out.println(" --------------------------------------------------------------------------");
             }
         }
     }
     if(menu == 5){
-        System.out.println(" ***** Encerrando com sucesso ***** :D");
+        System.out.println(" ---------------------------------");
+        System.out.println(" *** Encerrando com sucesso *** :D");
+        System.out.println(" ---------------------------------\n");
         System.exit(0);
  }
     }
